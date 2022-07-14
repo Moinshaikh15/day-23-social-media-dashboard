@@ -39,7 +39,7 @@ function App() {
         {
             for: 'youtube',
             username: '@nathanf',
-            followers: "1987",
+            followers: "8239",
             todayInc: 0,
             todayDec: '144',
             image: youtube
