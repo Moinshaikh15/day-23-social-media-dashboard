@@ -100,9 +100,8 @@ function App() {
             countDec: '12%'
         }
     ]
-    let handleclick = (e) => {
-        setIsDarkMode(!isDarkMode)
-        e.currentTarget.classList.toggle('toggle-btn')
+    let handleclick = () => {
+        setIsDarkMode(!isDarkMode);
     }
 
     return (
@@ -116,7 +115,7 @@ function App() {
                     <div className="line"></div>
                     <div className="darkmode-container">
                         <p>Dark mode</p>
-                        <button ><div className="toggle" onClick={handleclick}></div></button>
+                        <button ><div className={isDarkMode ? 'toggle' : 'toggle toggle-btn'} onClick={handleclick}></div></button>
                     </div>
 
                 </div>
