@@ -7,7 +7,7 @@ import youtube from '../images/icon-youtube.svg'
 import { useState } from "react"
 function App() {
 
-    let [isActive, setIsActive] = useState(false);
+    let [isDarkMode, setIsDarkMode] = useState(true);
 
 
 
@@ -101,41 +101,45 @@ function App() {
         }
     ]
     let handleclick = (e) => {
+        setIsDarkMode(!isDarkMode)
         e.currentTarget.classList.toggle('toggle-btn')
     }
 
     return (
-        <div className="main-container">
-            <div className="header">
-                <div >
-                    <h2>Social Media Dashboard</h2>
-                    <p>Total Followers:23,044</p>
-                </div>
-                <div className="line"></div>
-                <div className="darkmode-container">
-                    <p>Dark mode</p>
-                    <button ><div className="toggle" onClick={handleclick}></div></button>
-                </div>
+        <div className={isDarkMode ? 'main' : 'main light-theme'}>
+            <div className='main-container' >
+                <div className="header">
+                    <div >
+                        <h2>Social Media Dashboard</h2>
+                        <p>Total Followers:23,044</p>
+                    </div>
+                    <div className="line"></div>
+                    <div className="darkmode-container">
+                        <p>Dark mode</p>
+                        <button ><div className="toggle" onClick={handleclick}></div></button>
+                    </div>
 
-            </div>
-
-            <div className="top-container">
-
-
-                <div className="tcard-container">
-                    {topArr.map((e) => <Card for={e.for} username={e.username} followers={e.followers} inc={e.todayInc} dec={e.todayDec} followerText={(e.for === 'youtube') ? 'SUBSCRIBERS' : 'FOLLOWERS'} imgPath={e.image} />)}
                 </div>
 
+                <div className="top-container">
 
-            </div>
-            <div className="bottom-container">
-                <h2>Overview - Today</h2>
 
-                <div className="bcard-container">
+                    <div className="tcard-container">
+                        {topArr.map((e) => <Card for={e.for} username={e.username} followers={e.followers} inc={e.todayInc} dec={e.todayDec} followerText={(e.for === 'youtube') ? 'SUBSCRIBERS' : 'FOLLOWERS'} imgPath={e.image} />)}
+                    </div>
 
-                    {
-                        botttomArr.map((e) => <Card2 imgPath={e.image} count={e.count} countType={e.counType} countInc={e.countInc} countDec={e.countDec} />)
-                    }
+
+                </div>
+                <div className="bottom-container">
+                    <h2>Overview - Today</h2>
+
+                    <div className="bcard-container">
+
+                        {
+                            botttomArr.map((e) => <Card2 imgPath={e.image} count={e.count} countType={e.counType} countInc={e.countInc} countDec={e.countDec} />)
+                        }
+                    </div>
+
                 </div>
 
             </div>

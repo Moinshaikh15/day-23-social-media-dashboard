@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 
 }
+
 body {
-    background-color: hsl(230, 17%, 14%);
+    background-color: var(--bg-color);
     color: hsl(228, 34%, 66%);
     font-family: 'Inter', sans-serif;
     width: 100vw;
@@ -19,12 +21,28 @@ body {
 
 :root {
     --h1color: hsl(0, 0%, 100%);
-    ;
+    --bg-color: hsl(230, 17%, 14%);
+    --card-bg-color: hsl(228, 28%, 20%);
+    --btn-bg:linear-gradient(to right, rgb(99, 99, 206), rgb(102, 232, 102));
 }
 
+.light-theme {
+    --h1color: hsl(230, 17%, 14%);
+    --bg-color: hsl(0, 0%, 100%);
+    --card-bg-color: hsl(227, 47%, 96%);
+    --btn-bg: hsl(230, 22%, 74%);
+    
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
 .main-container {
     padding: 20px;
-    margin-top: 20px;
+    /* background-color: var(--bg-color); */
 }
 
 body h1,
@@ -55,7 +73,7 @@ h2 {
     height: 30px;
     border-radius: 20px;
     border: none;
-    background-image: linear-gradient(to right, rgb(99, 99, 206), rgb(102, 232, 102));
+    background-image: var(--btn-bg);
     cursor: pointer;
 
 }
@@ -68,7 +86,8 @@ h2 {
     margin: 3px;
     margin-left: 5px;
 }
-.toggle-btn{
+
+.toggle-btn {
     transform: translate(26px);
 }
 
@@ -93,9 +112,10 @@ h2 {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    background-color: hsl(228, 28%, 20%);
+    background-color: var(--card-bg-color);
 }
-.card:hover{
+
+.card:hover {
     background-color: hsl(231, 19%, 26%);
     cursor: pointer;
 }
@@ -159,14 +179,16 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: hsl(228, 28%, 20%);
+    background-color: var(--card-bg-color);
     font-weight: 700;
 
 }
-.card2:hover{
+
+.card2:hover {
     background-color: hsl(231, 19%, 26%);
     cursor: pointer;
 }
+
 .card2 div {
     display: flex;
     justify-content: space-between;
@@ -183,16 +205,17 @@ h2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
 }
-.card2 .percent img{
+
+.card2 .percent img {
     margin-right: 5px;
 }
 
 
 /* Dekstop view */
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:1440px) {
 
     body {
         display: flex;
@@ -235,9 +258,10 @@ h2 {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
-      
+
     }
-    .card2{
+
+    .card2 {
         width: 280px;
     }
 
