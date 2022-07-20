@@ -115,7 +115,7 @@ function App() {
                     <div className="line"></div>
                     <div className="darkmode-container">
                         <p>Dark mode</p>
-                        <button ><div className={isDarkMode ? 'toggle' : 'toggle toggle-btn'} onClick={handleclick}></div></button>
+                        <button className={isDarkMode ? '' : 'toggle-btn'}  onClick={handleclick} ><div className='toggle'></div></button>
                     </div>
 
                 </div>
