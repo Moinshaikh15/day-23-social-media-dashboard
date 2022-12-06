@@ -215,6 +215,15 @@ h2 {
 .card2 .percent img {
     margin-right: 5px;
 }
+.bcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
 
 
 /* Dekstop view */
@@ -262,6 +271,8 @@ h2 {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
 
     }
 
