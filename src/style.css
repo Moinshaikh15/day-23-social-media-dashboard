@@ -1,286 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar {
-    display: none;
-
+  display: none;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: hsl(228, 34%, 66%);
-    font-family: 'Inter', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
+  background-color: var(--bg-color);
+  color: hsl(228, 34%, 66%);
+  font-family: "Inter", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
 }
 
 :root {
-    --h1color: hsl(0, 0%, 100%);
-    --bg-color: hsl(230, 17%, 14%);
-    --card-bg-color: hsl(228, 28%, 20%);
-    --btn-bg: linear-gradient(to right, rgb(99, 99, 206), rgb(102, 232, 102));
-    --hover-color:hsl(231, 19%, 26%)
+  --h1color: hsl(0, 0%, 100%);
+  --bg-color: hsl(230, 17%, 14%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --btn-bg: linear-gradient(to right, rgb(99, 99, 206), rgb(102, 232, 102));
+  --hover-color: hsl(231, 19%, 26%);
 }
 
 .light-theme {
-    --h1color: hsl(230, 17%, 14%);
-    --bg-color: hsl(0, 0%, 100%);
-    --card-bg-color: hsl(227, 47%, 96%);
-    --btn-bg: hsl(230, 22%, 74%);
-    --hover-color:hsl(230, 22%, 74%)
-    
+  --h1color: hsl(230, 17%, 14%);
+  --bg-color: hsl(0, 0%, 100%);
+  --card-bg-color: hsl(227, 47%, 96%);
+  --btn-bg: hsl(230, 22%, 74%);
+  --hover-color: hsl(230, 22%, 74%);
 }
-.main{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    background-color: var(--bg-color);
+.main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
 }
 .main-container {
-    padding: 20px;
-    /* background-color: var(--bg-color); */
+  padding: 20px;
+  /* background-color: var(--bg-color); */
 }
 
 body h1,
 h2 {
-    color: var(--h1color);
-    margin-bottom: 5px;
+  color: var(--h1color);
+  margin-bottom: 5px;
 }
 
-
-
 .line {
-    height: 0.5px;
-    width: 100%;
-    background-color: hsl(228, 34%, 66%);
-    margin: 20px auto;
+  height: 0.5px;
+  width: 100%;
+  background-color: hsl(228, 34%, 66%);
+  margin: 20px auto;
 }
 
 .darkmode-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .darkmode-container button {
-    width: 60px;
-    height: 30px;
-    border-radius: 20px;
-    border: none;
-    background-image: var(--btn-bg);
-    cursor: pointer;
-   
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-image: var(--btn-bg);
+  cursor: pointer;
 }
 /* .darkmode-container button:hover{
     background-image: linear-gradient(to right, rgb(99, 99, 206), rgb(102, 232, 102));
 } */
 .darkmode-container .toggle {
-    width: 25px;
-    height: 25px;
-    background-color: rgb(27, 34, 47);
-    border-radius: 20px;
-    margin: 2px;
-    margin-left: 4px;
-    transition: all 0.5s ease-in-out;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(27, 34, 47);
+  border-radius: 20px;
+  margin: 2px;
+  margin-left: 4px;
+  transition: all 0.5s ease-in-out;
 }
 
-.toggle-btn  .toggle{
-    transform: translate(25px);
+.toggle-btn .toggle {
+  transform: translate(25px);
 }
 
 .tcard-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .card {
-    width: 100%;
-    height: 200px;
-    margin: 10px;
-    max-width: 315px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--card-bg-color);
+  width: 100%;
+  height: 200px;
+  margin: 10px;
+  max-width: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg-color);
 }
 
 .card:hover {
-    background-color: var(--hover-color);
-    cursor: pointer;
+  background-color: var(--hover-color);
+  cursor: pointer;
 }
 
 .card-topline {
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .logo-username {
-    display: flex;
-    margin: 10px;
-    color: hsl(228, 34%, 66%);
-    font-weight: 700
+  display: flex;
+  margin: 10px;
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
 }
 
 .logo-username img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .card h1 {
-    font-size: 55px;
+  font-size: 55px;
 }
 
 .fol {
-    letter-spacing: 5px;
-    color: hsl(228, 34%, 66%);
-    font-size: 12px;
+  letter-spacing: 5px;
+  color: hsl(228, 34%, 66%);
+  font-size: 12px;
 }
 
 .card .today-div {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .card .today-div img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .bottom-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .bottom-container h2 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .card2 {
-    width: 100%;
-    height: 150px;
-    margin: 10px;
-    max-width: 315px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background-color: var(--card-bg-color);
-    font-weight: 700;
-
+  width: 100%;
+  height: 150px;
+  margin: 10px;
+  max-width: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--card-bg-color);
+  font-weight: 700;
 }
 
 .card2:hover {
-    background-color: var(--hover-color);
-    cursor: pointer;
+  background-color: var(--hover-color);
+  cursor: pointer;
 }
 
 .card2 div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
 }
 
 .card2 .div1 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .card2 .percent {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .card2 .percent img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .bcard-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
 
 /* Dekstop view */
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 
-    body {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
+  .line {
+    display: none;
+  }
 
-    .line {
-        display: none;
-    }
+  .main-container {
+    /* margin: auto 60px; */
+    width: 80vw;
+  }
 
+  .main-container .header {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px;
+  }
 
-    .main-container {
-        /* margin: auto 60px; */
-        width: 80vw;
-    }
+  .darkmode-container button {
+    margin-left: 10px;
+  }
 
-    .main-container .header {
-        justify-content: space-between;
-        display: flex;
-        margin-bottom: 20px;
+  .tcard-container {
+    justify-content: space-between;
+  }
 
-    }
+  .card {
+    width: 280px;
+  }
 
-    .darkmode-container button {
-        margin-left: 10px;
-    }
+  .bcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-    .tcard-container {
-        justify-content: space-between;
-    }
-
-    .card {
-        width: 280px;
-
-    }
-
-    .bcard-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-
-    }
-
-    .card2 {
-        width: 280px;
-    }
-
-
-
-
+  .card2 {
+    width: 280px;
+  }
 }
